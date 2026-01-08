@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5174";
+const API_BASE = "https://soloqchall.onrender.com";
 const API_STATS = `${API_BASE}/api/stats`;
 
 function avatarSrc(playerId) {
@@ -155,3 +155,4 @@ async function init() {
 }
 
 document.addEventListener("DOMContentLoaded", init);
+
