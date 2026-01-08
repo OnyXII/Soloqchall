@@ -54,7 +54,7 @@ app.use(express.json());
 
 // CORS pour le front python :5173
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Origin", "cacapipi.matheobosse.workers.dev");
   res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   next();
@@ -383,3 +383,4 @@ app.listen(PORT, () => {
   console.log(`ℹ️ Top champs sample: ${TOP_CHAMPS_MATCHES_PER_PLAYER} match/player`);
   console.log(`ℹ️ Date filter MATCH_FROM_UNIX=${MATCH_FROM_UNIX} (0 = aucun filtre)`);
 });
+
