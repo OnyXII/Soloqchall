@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5174";
+const API_BASE = "https://soloqchall.onrender.com";
 const API_ELO = `${API_BASE}/api/elo`;
 const IMAGE_DIR = "Image";
 const RANK_DIR = "rang";
@@ -134,3 +134,4 @@ async function init() {
 }
 
 init();
+
