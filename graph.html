@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoloQ Challenge — Graph</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <div class="bg"></div>
+
+      <div class="container">
+        <header class="header">
+          <div class="brand">SoloQ Challenge</div>
+          <nav class="nav">
+            <a class="nav__link" href="./index.html">Accueil</a>
+            <a class="nav__link" href="./stats.html">Stats</a>
+            <a class="nav__link" href="./elo.html">Élo</a>
+            <a class="nav__link nav__link--active" href="./graph.html">Graph</a>
+          </nav>
+        </header>
+
+        <div class="topline">
+          <div class="topline__label">GRAPH</div>
+          <div class="topline__rule"></div>
+        </div>
+
+        <section class="graphPanel">
+          <div class="graphControls">
+            <div class="seg">
+              <button class="seg__btn seg__btn--active" data-days="7">7j</button>
+              <button class="seg__btn" data-days="30">30j</button>
+            </div>
+
+            <div class="seg">
+              <button class="seg__btn seg__btn--active" data-metric="score">Rang+LP</button>
+              <button class="seg__btn" data-metric="lp">LP</button>
+              <button class="seg__btn" data-metric="wr">WR</button>
+            </div>
+
+            <div class="picker" id="picker"></div>
+
+            <button class="btnGhost" id="btnAll">Tout le monde</button>
+            <button class="btnGhost" id="btnClear">Clear</button>
+          </div>
+
+          <div class="graphWrap">
+            <canvas id="chart" width="1200" height="460"></canvas>
+            <div class="tooltip" id="tooltip"></div>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <span class="pill" id="queuePill">Queue</span>
+          <span id="metaGraph">Chargement…</span>
+        </footer>
+      </div>
+    </main>
+
+    <script src="./graph.js"></script>
+  </body>
+</html>
